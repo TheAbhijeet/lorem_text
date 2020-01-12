@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/TheAbhijeet/lorem_text
+    $ git clone git://github.com/TheAbhijeet/lorem-text
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl -OJL https://github.com/TheAbhijeet/lorem_text/tarball/master
+    $ curl -OJL https://github.com/TheAbhijeet/lorem-text/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/TheAbhijeet/lorem_text
-.. _tarball: https://github.com/TheAbhijeet/lorem_text/tarball/master
+.. _Github repo: https://github.com/TheAbhijeet/lorem-text
+.. _tarball: https://github.com/TheAbhijeet/lorem-text/tarball/master

@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* Abhijeet Pal <audreyr@example.com>
+* Abhijeet Pal 
 
 Contributors
 ------------

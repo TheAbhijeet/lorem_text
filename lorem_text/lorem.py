@@ -90,7 +90,7 @@ def paragraphs(len):
 
 def words(count):
     """
-    Return a string of `len` lorem ipsum words separated by a single space.
+    Returns lorem ipsum words separated by a single space.
     """
 
     word_list = []
