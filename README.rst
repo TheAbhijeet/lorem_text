@@ -3,9 +3,6 @@ Lorem Text
 ==========
 
 
-.. image:: https://img.shields.io/pypi/v/lorem_text.svg
-        :target: https://pypi.python.org/pypi/lorem_text
-
 .. image:: https://travis-ci.org/TheAbhijeet/lorem-text.svg?branch=master
         :target: https://travis-ci.org/TheAbhijeet/lorem-text
 
@@ -34,11 +31,16 @@ Dummy lorem ipsum text generator for Python.
 Usage
 =====
 
+To install Lorem Text, run this command in your terminal::
+
+        pip install lorem_text
+
+
 To use Lorem Text in a project::
 
     from lorem_text import lorem
 
-    
+
 For randomly generated sentence of lorem ipsum text where The first word is capitalized, and the sentence ends in either a period or question mark::
 
     lorem.sentence()
@@ -57,7 +59,7 @@ To generate random lorem ipsum words seperated with single space::
 
 
 Command Line Interface 
---------
+----------------------
 
 To generate lorem ipsum paragraph randomly generated paragraph of lorem ipsum text::
 
