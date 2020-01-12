@@ -12,3 +12,12 @@ install: pip install -U tox-travis
 
 # Command to run tests, e.g. python setup.py test
 script: tox
+
+deploy:
+    provider: pypi
+    distributions: sdist bdist_wheel
+
+    on:
+        tags: true
+        repo: TheAbhijeet/lorem_text
+        python: 3.8
