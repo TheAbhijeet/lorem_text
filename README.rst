@@ -25,7 +25,7 @@ Features
 Dummy lorem ipsum text generator for Python.
 
 * Generate dummy senetnce, paragraphs and words.
-* Command line interface API also included.
+* Command line interface tool included.
 
 =====
 Usage
