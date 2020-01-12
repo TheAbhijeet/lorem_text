@@ -3,7 +3,7 @@ Lorem Text
 ==========
 
 
-.. image:: https://travis-ci.org/TheAbhijeet/lorem-text.svg?branch=master
+.. image:: https://travis-ci.org/TheAbhijeet/lorem_text.svg?branch=master
         :target: https://travis-ci.org/TheAbhijeet/lorem-text
 
 .. image:: https://readthedocs.org/projects/lorem-text/badge/?version=latest
