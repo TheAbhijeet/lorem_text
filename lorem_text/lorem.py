@@ -92,13 +92,16 @@ def words(count):
     """
     Return a string of `len` lorem ipsum words separated by a single space.
     """
-    word_list = list(COMMON_WORDS)
-    length = len(COMMON_WORDS)
 
-    if count < length:
-        word_list = COMMON_WORDS[0:count]
-
+    word_list = []
+    c = len(word_list)
+    if count > c:
+        count -= c
+        while count > 0:
+            c = min(count, len(WORDS))
+            count -= c
+            word_list += random.sample(WORDS, c)
     else:
-        k = count-length
-        word_list.extend(random.sample(WORDS, k))
-    return " ".join(word_list)
+        word_list = word_list[:count]
+
+    return ' '.join(word_list)
