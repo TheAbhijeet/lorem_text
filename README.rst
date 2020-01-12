@@ -4,7 +4,7 @@ Lorem Text
 
 
 .. image:: https://travis-ci.org/TheAbhijeet/lorem_text.svg?branch=master
-        :target: https://travis-ci.org/TheAbhijeet/lorem-text
+        :target: https://travis-ci.org/TheAbhijeet/lorem_text
 
 .. image:: https://readthedocs.org/projects/lorem-text/badge/?version=latest
         :target: https://lorem-text.readthedocs.io/en/latest/?badge=latest
