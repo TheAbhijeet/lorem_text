@@ -6,7 +6,7 @@ Lorem Text
 .. image:: https://img.shields.io/pypi/v/lorem_text.svg
         :target: https://pypi.python.org/pypi/lorem_text
 
-.. image:: https://img.shields.io/travis/TheAbhijeet/lorem_text.svg
+.. image:: https://travis-ci.org/TheAbhijeet/lorem-text.svg?branch=master
         :target: https://travis-ci.org/TheAbhijeet/lorem_text
 
 .. image:: https://readthedocs.org/projects/lorem-text/badge/?version=latest
