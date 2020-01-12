@@ -12,6 +12,7 @@ For randomly generated sentence of lorem ipsum text where The first word is capi
 
     lorem.sentence()
 
+
 To generate lorem ipsum paragraph randomly generated paragraph of lorem ipsum text.The paragraph consists of between 2 to 4 sentences::
 
     paragraph_length = 5
@@ -23,6 +24,7 @@ To generate random lorem ipsum words seperated with single space::
     words = 10
     lorem.words(words)
 
+
 Command Line Interface 
 --------
 
@@ -30,12 +32,15 @@ To generate lorem ipsum paragraph randomly generated paragraph of lorem ipsum te
 
     lorem_text
 
+
 For randomly generated sentence::
 
     lorem_text --s 
 
+
 For randomly generated lorem ipsum words::
 
     lorem_text --words=50
+
 
 
