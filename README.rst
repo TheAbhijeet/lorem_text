@@ -38,9 +38,8 @@ To use Lorem Text in a project::
 
     from lorem_text import lorem
 
-
-For randomly generated sentence of lorem ipsum text where The first word is capitalized, and the sentence ends in either a period or
-    question mark::
+    
+For randomly generated sentence of lorem ipsum text where The first word is capitalized, and the sentence ends in either a period or question mark::
 
     lorem.sentence()
 
