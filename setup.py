@@ -18,7 +18,7 @@ test_requirements = []
 
 setup(
     author="Abhijeet Pal",
-    author_email='audreyr@example.com',
+    # author_email='',
     python_requires='>=3.5',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
@@ -47,7 +47,7 @@ setup(
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/TheAbhijeet/lorem_text',
+    url='https://github.com/TheAbhijeet/lorem-text',
     version='0.1.0',
     zip_safe=False,
 )
