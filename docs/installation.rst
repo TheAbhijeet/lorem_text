@@ -12,7 +12,7 @@ To install Lorem Text, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install lorem_text
+    $ pip install lorem-text
 
 This is the preferred method to install Lorem Text, as it will always install the most recent stable release.
 

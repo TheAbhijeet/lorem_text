@@ -33,7 +33,7 @@ Usage
 
 To install Lorem Text, run this command in your terminal::
 
-        pip install lorem_text
+        pip install lorem-text
 
 
 To use Lorem Text in a project::
