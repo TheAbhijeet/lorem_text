@@ -85,7 +85,7 @@ def paragraphs(len):
             paras.append(COMMON_P)
         else:
             paras.append(paragraph())
-    return paras
+    return "\n".join(paras)
 
 
 def words(count):
