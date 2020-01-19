@@ -40,6 +40,11 @@ class TestLorem_text(unittest.TestCase):
         size = len(re.split(",", para))
         self.assertTrue(3 <= size <= 15)
 
+    def test_paragraphs(self):
+        paras = lorem.paragraphs(2)
+        size = len(paras)
+        self.assertTrue(size <= 10)
+
     def test_command_line_interface(self):
         """Test the CLI."""
         runner = CliRunner()

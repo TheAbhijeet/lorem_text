@@ -16,11 +16,14 @@ For randomly generated sentence of lorem ipsum text where the first word is capi
 
     lorem.sentence()
 
+Generate a single paragraph:: 
 
-Randomly generated paragraph of lorem ipsum text each paragraph's consists of 2 to 4 sentences::
+    lorem.paragraph()
+
+Generate multiple paragraphs of lorem ipsum text each paragraph's consists of 2 to 4 sentences::
 
     paragraph_length = 5
-    lorem.paragraph(paragraph_length)
+    lorem.paragraphs(paragraph_length)
 
 
 Generate random lorem ipsum words seperated with single space::
