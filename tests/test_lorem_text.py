@@ -38,7 +38,7 @@ class TestLorem_text(unittest.TestCase):
     def test_paragraph(self):
         para = lorem.paragraph()
         size = len(re.split(",", para))
-        self.assertTrue(3 <= size <= 15)
+        self.assertTrue(2 <= size <= 15)
 
     def test_paragraphs(self):
         paras = lorem.paragraphs(2)
