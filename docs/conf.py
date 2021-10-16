@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Lorem Text'
-copyright = "2020, Abhijeet Pal"
+copyright = "2021, Abhijeet Pal"
 author = "Abhijeet Pal"
 
 # The version info for the project you're documenting, acts as replacement
