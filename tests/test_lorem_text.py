@@ -4,25 +4,14 @@
 
 import re
 import unittest
+
 from click.testing import CliRunner
 
-from lorem_text import lorem
-from lorem_text import cli
+from lorem_text import cli, lorem
 
 
 class TestLorem_text(unittest.TestCase):
     """Tests for `lorem_text` package."""
-
-    # def setUp(self):
-    #     """Set up test fixtures, if any."""
-    #     pass
-
-    # def tearDown(self):
-    #     """Tear down test fixtures, if any."""
-    #     pass
-
-    def test_sum(self):
-        self.assertEqual(sum([1, 2, 3]), 6, "Should be 6")
 
     def test_short_words(self):
         self.assertEqual(len(lorem.words(4).split()), 4, "Should be 4")
@@ -50,16 +39,16 @@ class TestLorem_text(unittest.TestCase):
         runner = CliRunner()
         result = runner.invoke(cli.main)
         assert result.exit_code == 0
-        help_result = runner.invoke(cli.main, ['--help'])
-        sentence_result = runner.invoke(cli.main, ['--s'])
-        words_result = runner.invoke(cli.main, ['--words=4'])
+        help_result = runner.invoke(cli.main, ["--help"])
+        sentence_result = runner.invoke(cli.main, ["--s"])
+        words_result = runner.invoke(cli.main, ["--words=4"])
         assert help_result.exit_code == 0
         assert sentence_result.exit_code == 0
         assert words_result.exit_code == 0
         # Test for paragraph
         para_result = (runner.invoke(cli.main)).output
         size = len(re.split(",", para_result))
-        assert (3 <= size <= 15)
+        assert 3 <= size <= 15
         # Test for words
         words_result = (runner.invoke(cli.main, "--words=120")).output
         word_len = len(words_result.split())
@@ -67,8 +56,8 @@ class TestLorem_text(unittest.TestCase):
         # Test for sentence
         sentence_result = (runner.invoke(cli.main, "--s")).output
         size = len(re.split(",", sentence_result))
-        assert (2 <= size <= 5)
+        assert 2 <= size <= 5
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -13,7 +13,7 @@ Lorem Text
 
 
 
-Dummy lorem ipsum text generator 
+Dummy lorem ipsum text generator
 
 
 * Free software: MIT license
@@ -45,7 +45,7 @@ For randomly generated sentence of lorem ipsum text where the first word is capi
 
     lorem.sentence()
 
-Generate a single paragraph:: 
+Generate a single paragraph::
 
     lorem.paragraph()
 
@@ -62,7 +62,7 @@ Generate random lorem ipsum words seperated with single space::
     lorem.words(words)
 
 
-Command Line Interface 
+Command Line Interface
 ----------------------
 
 For randomly generated paragraph of lorem ipsum text::
@@ -71,7 +71,7 @@ For randomly generated paragraph of lorem ipsum text::
 
 Lorem ipsum sentence::
 
-    lorem_text --s 
+    lorem_text --s
 
 Lorem ipsum words::
 

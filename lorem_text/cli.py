@@ -1,13 +1,15 @@
 """Console script for lorem_text."""
-import click
 import sys
+
+import click
+
 from lorem_text import lorem
 
 
 @click.command()
-@click.option('--words', type=int, help="Returns lorem ipsum words")
-@click.option('--s', is_flag=True, help="Returns lorem ipsum sentence")
-def main(words,  s):
+@click.option("--words", type=int, help="Returns lorem ipsum words")
+@click.option("--s", is_flag=True, help="Returns lorem ipsum sentence")
+def main(words, s):
     """Console script for lorem."""
     if words:
         words = int(words)

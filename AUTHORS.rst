@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* Abhijeet Pal 
+* Abhijeet Pal
 
 Contributors
 ------------
