@@ -51,7 +51,7 @@ setup(
     setup_requires=setup_requirements,
     test_suite="tests",
     tests_require=test_requirements,
-    url="https://github.com/TheAbhijeet/lorem-text",
+    url="https://github.com/TheAbhijeet/lorem_text",
     version="2.1",
     zip_safe=False,
 )
