@@ -4,7 +4,7 @@ certifi==2021.10.8
 charset-normalizer==2.0.7
 docutils==0.18
 idna==3.3
-imagesize==1.2.0
+imagesize==1.4.0
 Jinja2==3.0.2
 MarkupSafe==2.1.0
 packaging==21.2
