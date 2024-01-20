@@ -6,7 +6,7 @@ docutils==0.18
 idna==3.3
 imagesize==1.2.0
 Jinja2==3.0.2
-MarkupSafe==2.1.0
+MarkupSafe==2.1.4
 packaging==21.2
 pkg_resources==0.0.0
 Pygments==2.10.0
