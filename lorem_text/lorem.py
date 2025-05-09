@@ -1,5 +1,3 @@
-"""Main module."""
-
 import random
 
 COMMON_P = (
@@ -220,7 +218,7 @@ COMMON_WORDS = (
 )
 
 
-def sentence():
+def sentence() -> str:
     """
     Return a randomly generated sentence of lorem ipsum text.
     The first word is capitalized, and the sentence ends in either a period or
@@ -230,28 +228,28 @@ def sentence():
     # each section for this sentence.
     sections = [
         " ".join(random.sample(WORDS, random.randint(3, 12)))
-        for i in range(random.randint(2, 5))
+        for _ in range(random.randint(2, 5))
     ]
     s = ", ".join(sections)
     # Convert to sentence case and add end punctuation.
     return "%s%s%s" % (s[0].upper(), s[1:], random.choice("?."))
 
 
-def paragraph():
+def paragraph() -> str:
     """
     Return a randomly generated paragraph of lorem ipsum text.
-    The paragraph consists of between 2 to 4 sentences.
+    The paragraph consists of between 2 and 4 sentences.
     """
-    return " ".join(sentence() for i in range(random.randint(2, 4)))
+    return " ".join(sentence() for _ in range(random.randint(2, 4)))
 
 
-def paragraphs(len):
+def paragraphs(length: int) -> str:
     """
     Return a list of paragraphs as returned by paragraph(). the first
     paragraph will be the standard 'lorem ipsum' paragraph.
     """
     paras = []
-    for i in range(len):
+    for i in range(length):
         if i == 0:
             paras.append(COMMON_P)
         else:
@@ -259,7 +257,7 @@ def paragraphs(len):
     return "\n".join(paras)
 
 
-def words(count):
+def words(count: int) -> str:
     """
     Returns lorem ipsum words separated by a single space.
     """

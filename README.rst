@@ -3,14 +3,9 @@ Lorem Text
 ==========
 
 
-.. image:: https://travis-ci.org/TheAbhijeet/lorem_text.svg?branch=master
-        :target: https://travis-ci.org/TheAbhijeet/lorem_text
+.. image:: https://img.shields.io/pypi/dm/lorem_text
 
-.. image:: https://readthedocs.org/projects/lorem-text/badge/?version=latest
-        :target: https://lorem-text.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
-
-
+.. image:: https://img.shields.io/pypi/pyversions/lorem_text
 
 
 Dummy lorem ipsum text generator
