@@ -80,7 +80,7 @@ Ready to contribute? Here's how to set up `lorem_text` for local development.
    tests, including testing other Python versions with tox::
 
     $ flake8 lorem_text tests
-    $ python setup.py test or pytest
+    $ pytest
     $ tox
 
    To get flake8 and tox, just pip install them into your virtualenv.

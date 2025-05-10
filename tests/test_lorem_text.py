@@ -1,16 +1,13 @@
-#!/usr/bin/env python
-
-"""Tests for `lorem_text` package."""
-
 import re
+import sys
 import unittest
+from unittest.mock import patch
 
-from click.testing import CliRunner
+from lorem_text import lorem
+from lorem_text.cli import lorem_cli
 
-from lorem_text import cli, lorem
 
-
-class TestLorem_text(unittest.TestCase):
+class TestLoremText(unittest.TestCase):
     """Tests for `lorem_text` package."""
 
     def test_short_words(self):
@@ -34,29 +31,43 @@ class TestLorem_text(unittest.TestCase):
         size = len(paras)
         self.assertTrue(size >= 10)
 
-    def test_command_line_interface(self):
-        """Test the CLI."""
-        runner = CliRunner()
-        result = runner.invoke(cli.main)
-        assert result.exit_code == 0
-        help_result = runner.invoke(cli.main, ["--help"])
-        sentence_result = runner.invoke(cli.main, ["--s"])
-        words_result = runner.invoke(cli.main, ["--words=4"])
-        assert help_result.exit_code == 0
-        assert sentence_result.exit_code == 0
-        assert words_result.exit_code == 0
-        # Test for paragraph
-        para_result = (runner.invoke(cli.main)).output
-        size = len(re.split(",", para_result))
-        assert 3 <= size <= 15
-        # Test for words
-        words_result = (runner.invoke(cli.main, "--words=120")).output
-        word_len = len(words_result.split())
-        assert word_len == 120
-        # Test for sentence
-        sentence_result = (runner.invoke(cli.main, "--s")).output
-        size = len(re.split(",", sentence_result))
-        assert 2 <= size <= 5
+
+class TestCLI(unittest.TestCase):
+    def run_main(self, args):
+        with patch.object(sys, "argv", ["prog"] + args):
+            from io import StringIO
+            from contextlib import redirect_stdout
+
+            out = StringIO()
+            with redirect_stdout(out):
+                lorem_cli()
+            return out.getvalue()
+
+    def test_cli_main_exit_code(self):
+        self.run_main([])  # should not raise
+
+    def test_cli_help_exit_code(self):
+        with self.assertRaises(SystemExit) as cm:
+            self.run_main(["--help"])
+        self.assertEqual(cm.exception.code, 0)
+
+    def test_cli_sentence_flag_output(self):
+        output = self.run_main(["--s"])
+        size = len(re.split(r"[.!?]", output.strip()))
+        self.assertTrue(2 <= size <= 5)
+
+    def test_cli_words_flag_output(self):
+        output = self.run_main(["--words=4"])
+        self.assertEqual(len(output.split()), 4)
+
+    def test_paragraph_output_size(self):
+        output = self.run_main([])
+        size = len(re.split(r"[.!?]", output.strip()))
+        self.assertTrue(3 <= size <= 15)
+
+    def test_words_output_120(self):
+        output = self.run_main(["--words=120"])
+        self.assertEqual(len(output.split()), 120)
 
 
 if __name__ == "__main__":
